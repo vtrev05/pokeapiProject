@@ -1,0 +1,49 @@
+* {
+    margin: 0 auto;
+    text-align: center;
+    background-color: slateblue;
+}
+
+.div{
+    width: 100%;
+    
+}
+h1{
+    font-size: 23px;
+    padding: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+.title{
+    width: 90%;
+    font-size: 40px;
+    color: whitesmoke;
+}
+span{
+    width: 90%;
+    font-size: 32px;
+    color: whitesmoke;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    width: 350px;
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    margin: 10px;
+    border-radius: 8px;
+
+}
+
+img {
+    width: 90%;
+    background-size: contain;
+    padding: 10px;
+  }
