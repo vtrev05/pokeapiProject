@@ -49,8 +49,7 @@ const getOnlyOne = async () => {
 
 searchPokemonButton.addEventListener('click', getOnlyOne)
 
-
-
+//ALERTA AL INTRODUCIR VALORES ERRÓNEOS
 
 const alertFunction = (e) =>{
     e.target.removeEventListener(e.type, alertFunction)
@@ -66,3 +65,28 @@ const alertError = (e) => {
 
 typeYourPokemon.addEventListener('change', alertError)
 
+//GENERAR RANDOM
+
+
+const  getRandomArbitrary = (min, max) => {
+    return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+const generatePokemonRandom = document.querySelector('.generateRandom')
+const randomList = document.querySelector('.randomList')
+
+const getRandomPokemon = async () => {
+    const random = getRandomArbitrary(0, 898)
+
+    const pokemonList = await fetch(`https://pokeapi.co/api/v2/pokemon/${random}/`)
+    const pokemonsToJson = await pokemonList.json();
+    const pokemonInfo = 
+        {
+        name:pokemonsToJson.name,
+        image:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${random}.png`,
+        power: pokemonsToJson.abilities.map(ab => ab.ability.name)
+        }
+    randomList.innerHTML = `<li class="searcherli"><h1>${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/><h3>Habilidades</h3><ul><li class="searcher">${pokemonInfo.power[0]}</li><li class="searcher">${pokemonInfo.power[1]}</li><li class="searcher">${pokemonInfo.power[2]}</li></ul>`
+}
+
+generatePokemonRandom.addEventListener('click', getRandomPokemon)
