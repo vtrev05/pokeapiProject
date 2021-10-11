@@ -44,7 +44,7 @@ const getOnlyOne = async () => {
         name:pokemonsToJson.name,
         image:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${typeValue}.png`
         }
-    OnePokemonInfo.innerHTML = `<li class="search"><h1>${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/></li>`
+    OnePokemonInfo.innerHTML = `<li class="search"><h1 class="onePokemonTitle">${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/></li>`
 }
 
 searchPokemonButton.addEventListener('click', getOnlyOne)
@@ -86,7 +86,7 @@ const getRandomPokemon = async () => {
         image:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${random}.png`,
         power: pokemonsToJson.abilities.map(ab => ab.ability.name)
         }
-    randomList.innerHTML = `<li class="searcherli"><h1>${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/><h3>Habilidades</h3><ul><li class="searcher">${pokemonInfo.power[0]}</li><li class="searcher">${pokemonInfo.power[1]}</li><li class="searcher">${pokemonInfo.power[2]}</li></ul>`
+    randomList.innerHTML = `<li class="searcherli"><h1 class="onePokemonTitle">${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/><h3>Habilidades</h3><ul><li class="searcher">${pokemonInfo.power[0]}</li><li class="searcher">${pokemonInfo.power[1]}</li><li class="searcher">${pokemonInfo.power[2]}</li></ul>`
 }
 
 generatePokemonRandom.addEventListener('click', getRandomPokemon)

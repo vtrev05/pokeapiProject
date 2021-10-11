@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     text-align: center;
-    background-color: slateblue;
+    background-color: #e94141;
 }
 
 .principalContainer{
@@ -9,14 +9,15 @@ body {
     
     
 }
-h1{
-    font-size: 28px;
+h1, .onePokemonTitle{
+    font-size: 15px;
     padding: 15px;
     margin-top: 30px;
     font-weight: 900;
     text-transform: uppercase;
-    
-
+}
+.onePokemonTitle{
+    font-size: 28px;
 }
 h2{
     font-size: 28px;
@@ -27,8 +28,9 @@ h2{
     max-width: 600px;
     font-size: 30px;
     border-radius: 8px;
-    background-color: whitesmoke;
-    color: slateblue;
+    border: 3px solid #feca1b;
+    color: #feca1b;
+    background-color: #263238;
     margin: 0 auto;
     text-align: center;
 }
@@ -40,12 +42,12 @@ h3{
     font-weight: 700;
     max-width: 600px;
     border-radius: 8px;
-    color: whitesmoke;
+    color: #feca1b;
     margin: 0 auto;
     text-align: center;
 }
 h2:hover{
-    background-color: slateblue;
+    background-color: #e94141;
     color: whitesmoke;
     border: 3px solid whitesmoke;
     margin: 0 auto;
@@ -61,7 +63,7 @@ h2:hover{
 span{
     width: 90%;
     font-size: 32px;
-    color: whitesmoke;
+    color: #feca1b;
     text-transform: none;
     
 }
@@ -75,17 +77,12 @@ span{
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    color: slateblue;
-    background-color: whitesmoke;
-    border: 3px solid slateblue;
+    color: #feca1b;
+    background-color: #3761a8;
+    border: 3px solid #feca1b;
     
 }
-.allButton:hover, .searchPokemon:hover{
-    color: whitesmoke;
-    background-color: slateblue;
-    border: 3px solid whitesmoke;
-    
-}
+
 .totalPokemonList, .onlyOne, .randomList {
     display: flex;
     flex-wrap: wrap;
@@ -97,19 +94,20 @@ span{
     margin: 40px 20px;
 }
 .pokeList {
-    min-width: 250px;
-    max-width: 350px;
-    margin: 20px;
-    border: 3px solid whitesmoke;
-    color: whitesmoke;
+    width: 130px;
+    margin: 12px;
+    border: 3px solid #feca1b;
+    color: #feca1b;
     border-radius: 8px;
     list-style: none;
+    background-color: #3761a8;
 }
 .search{
     min-width: 250px;
     max-width: 100%;
-    border: 3px solid whitesmoke;
-    color: whitesmoke;
+    border: 3px solid #feca1b;
+    color: #feca1b;
+    background-color: #3761a8;
     border-radius: 8px;
     list-style: none;
     margin: 0 auto;
@@ -121,8 +119,9 @@ span{
     right: 17px;
     min-width: 150px;
     max-width: 100%;
-    border: 3px solid whitesmoke;
-    color: whitesmoke;
+    border: 3px solid #feca1b;
+    color: #feca1b;
+    background-color: #3761a8;
     border-radius: 8px;
     list-style: none;
     margin: 15px 0;
@@ -133,8 +132,9 @@ span{
 .searcherli{
     min-width: 150px;
     max-width: 300px;
-    border: 3px solid whitesmoke;
-    color: whitesmoke;
+    border: 3px solid #feca1b;
+    color: #feca1b;
+    background-color: #3761a8;
     border-radius: 8px;
     list-style: none;
     margin: 15px auto;
@@ -155,7 +155,7 @@ img {
     min-width: 200px;
     padding: 5px;
     background-color: whitesmoke;
-    color: slateblue;
+    color: #e94141;
     font-size: 20px;
     font-weight: 700;
     margin: 25px auto;
@@ -163,13 +163,13 @@ img {
 }
 
 .swal-title {
-    color: slateblue;
+    color: #e94141;
 }
 .swal-text {
-    color: slateblue;
+    color: #e94141;
     font-size: 18px;
     font-weight: 500;
 }
 .swal-button {
-    background-color: slateblue;
+    background-color: #e94141;
 }
