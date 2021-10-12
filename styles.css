@@ -82,6 +82,15 @@ span{
     border: 3px solid #feca1b;
     
 }
+.container{
+    display: flex;
+    width: 100%;
+}
+.randomPoke1, .randomPoke2{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
 
 .totalPokemonList, .onlyOne, .randomList {
     display: flex;
