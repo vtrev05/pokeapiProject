@@ -89,8 +89,8 @@ const getRandomPokemon = async () => {
         }
         debugger
         const totalAbilities = pokemonInfo.power.map((ab) => {
-            return `<li>${ab}</li>`
-        })
+            return `<li class="searcher">${ab}</li>`
+        }).join('')
         debugger
     randomList.innerHTML = `<li class="searcherli"><h1 class="onePokemonTitle">${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/><h3>Habilidades</h3><ul>${totalAbilities}</ul>`
 }
