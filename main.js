@@ -77,18 +77,30 @@ const randomList = document.querySelector('.randomList')
 
 const getRandomPokemon = async () => {
     const random = getRandomArbitrary(0, 898)
-
+    
     const pokemonList = await fetch(`https://pokeapi.co/api/v2/pokemon/${random}/`)
     const pokemonsToJson = await pokemonList.json();
     const pokemonInfo = 
         {
         name:pokemonsToJson.name,
         image:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${random}.png`,
-        power: pokemonsToJson.abilities.map(ab => ab.ability.name)
+        power: recoverAbility(pokemonsToJson.abilities)
+        
         }
-    randomList.innerHTML = `<li class="searcherli"><h1 class="onePokemonTitle">${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/><h3>Habilidades</h3><ul><li class="searcher">${pokemonInfo.power[0]}</li><li class="searcher">${pokemonInfo.power[1]}</li><li class="searcher">${pokemonInfo.power[2]}</li></ul>`
+        debugger
+        const totalAbilities = pokemonInfo.power.map((ab) => {
+            return `<li>${ab}</li>`
+        })
+        debugger
+    randomList.innerHTML = `<li class="searcherli"><h1 class="onePokemonTitle">${pokemonInfo.name}</h1><img src="${pokemonInfo.image}"/><h3>Habilidades</h3><ul>${totalAbilities}</ul>`
 }
-
+const recoverAbility = (abilities) => {
+    let abilitiesArray = [];
+    abilities.forEach(element => {
+        abilitiesArray.push(element.ability.name)
+    })
+    return abilitiesArray
+}
 generatePokemonRandom.addEventListener('click', getRandomPokemon)
 
 
